@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify, render_template
+from waitress import serve
 import torch
 from model import BiLSTM
 # from dataset import TimeSeriesInferenceBatchDataset
@@ -39,4 +40,5 @@ def predict():
     return result
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    # app.run(debug=True)
+    serve(app, host='0.0.0.0', port=80)
