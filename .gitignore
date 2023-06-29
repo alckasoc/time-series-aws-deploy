@@ -1,0 +1,5 @@
+__pycache__/
+rsa-key.pem
+archive.tar.gz
+train_model_5a04d_00095_95_batch_size=512,hidden_size=64,learning_rate=0.0003,max_epochs=1690,n_steps_in=6,n_steps_out=10,num_laye_2023-05-04_18-44-24/*
+pickle.dat
