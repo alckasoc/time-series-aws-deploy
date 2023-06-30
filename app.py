@@ -1,8 +1,11 @@
 from flask import Flask, request, jsonify, render_template
 from waitress import serve
 import torch
+import logging
 from model import BiLSTM
 # from dataset import TimeSeriesInferenceBatchDataset
+
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s %(message)s')
 
 model = BiLSTM(2, 10)
 _ = model.eval()
@@ -41,4 +44,4 @@ def predict():
 
 if __name__ == "__main__":
     # app.run(debug=True)
-    serve(app, host='0.0.0.0', port=80)
+    serve(app, host='127.0.0.1', port=8080)
